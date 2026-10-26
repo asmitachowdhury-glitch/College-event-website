@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innovación 2026 - IEM Kolkata Techno-Management Fest</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-graduation-cap"></i> IEM <span>Innovación '26</span>
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-item active">Home</a>
+        <a href="#events" class="nav-item">Events</a>
+        <a href="#register" class="nav-item">Register</a>
+        <a href="#gallery" class="nav-item">Gallery</a>
+        <a href="#about" class="nav-item">About Us</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HOME -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <span class="badge">Institute of Engineering & Management (IEM), Kolkata</span>
+        <h1>Innovación 2026</h1>
+        <p>The premier Annual Techno-Management & Cultural Festival of IEM Kolkata. Join us for 3 days of innovation, coding, robotics, music, and competitions!</p>
+        <div class="hero-buttons">
+          <a href="#events" class="btn btn-primary"><i class="fa-solid fa-calendar-days"></i> Explore Events</a>
+          <a href="#register" class="btn btn-outline"><i class="fa-solid fa-user-plus"></i> Student Registration</a>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card"><h3>20+</h3><p>Tech & Cultural Events</p></div>
+          <div class="stat-card"><h3>₹2,50,000+</h3><p>Prize Pool</p></div>
+          <div class="stat-card"><h3>3,000+</h3><p>Participants</p></div>
+          <div class="stat-card"><h3>3 Days</h3><p>Salt Lake Sector V</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: EVENTS -->
+    <section id="events" class="section">
+      <div class="section-title">
+        <h2>Fest Events</h2>
+        <p>Browse events by category or search by name</p>
+      </div>
+
+      <!-- JS Feature 1 & 2: Search & Filter Controls -->
+      <div class="filter-wrapper">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="eventSearch" placeholder="Search event name or keywords...">
+        </div>
+        <div class="filter-buttons" id="filterBtnGroup">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="tech">Technical</button>
+          <button class="filter-btn" data-filter="cultural">Cultural</button>
+          <button class="filter-btn" data-filter="gaming">Gaming</button>
+          <button class="filter-btn" data-filter="workshop">Workshops</button>
+        </div>
+      </div>
+
+      <div class="events-grid" id="eventsGrid">
+        <div class="event-card" data-category="tech">
+          <div class="event-tag tech">Technical</div>
+          <h3>IEM Hackathon '26</h3>
+          <p class="event-desc">24-Hour hackathon solving real-world AI and Web development problems at IEM Management Campus.</p>
+          <div class="event-meta">
+            <span><i class="fa-regular fa-calendar"></i> Nov 12, 10:00 AM</span>
+            <span><i class="fa-solid fa-location-dot"></i> Gurukul Campus Lab 4</span>
+          </div>
+          <a href="#register" class="btn btn-sm btn-primary event-reg-btn" data-event="IEM Hackathon '26">Register</a>
+        </div>
+
+        <div class="event-card" data-category="cultural">
+          <div class="event-tag cultural">Cultural</div>
+          <h3>IEMpact Band Battle</h3>
+          <p class="event-desc">Inter-college musical band face-off featuring rock, pop, and fusion performances.</p>
+          <div class="event-meta">
+            <span><i class="fa-regular fa-calendar"></i> Nov 12, 05:00 PM</span>
+            <span><i class="fa-solid fa-location-dot"></i> CII Auditorium</span>
+          </div>
+          <a href="#register" class="btn btn-sm btn-primary event-reg-btn" data-event="IEMpact Band Battle">Register</a>
+        </div>
+
+        <div class="event-card" data-category="tech">
+          <div class="event-tag tech">Technical</div>
+          <h3>Robo-Navigator & Wars</h3>
+          <p class="event-desc">Custom line-follower and arena combat robot competitions designed by engineering students.</p>
+          <div class="event-meta">
+            <span><i class="fa-regular fa-calendar"></i> Nov 13, 11:00 AM</span>
+            <span><i class="fa-solid fa-location-dot"></i> Management Campus Grounds</span>
+          </div>
+          <a href="#register" class="btn btn-sm btn-primary event-reg-btn" data-event="Robo-Navigator & Wars">Register</a>
+        </div>
+
+        <div class="event-card" data-category="gaming">
+          <div class="event-tag gaming">Gaming</div>
+          <h3>Valorant & BGMI LAN Fest</h3>
+          <p class="event-desc">High-stakes esports knockout tournament broadcasted live on college YouTube channel.</p>
+          <div class="event-meta">
+            <span><i class="fa-regular fa-calendar"></i> Nov 13, 01:00 PM</span>
+            <span><i class="fa-solid fa-location-dot"></i> IT Block Lab 2</span>
+          </div>
+          <a href="#register" class="btn btn-sm btn-primary event-reg-btn" data-event="Valorant & BGMI LAN Fest">Register</a>
+        </div>
+
+        <div class="event-card" data-category="workshop">
+          <div class="event-tag workshop">Workshop</div>
+          <h3>GenAI & Data Science Bootcamp</h3>
+          <p class="event-desc">Hands-on introductory workshop on Large Language Models and Python data science tools.</p>
+          <div class="event-meta">
+            <span><i class="fa-regular fa-calendar"></i> Nov 14, 10:30 AM</span>
+            <span><i class="fa-solid fa-location-dot"></i> Seminar Hall B</span>
+          </div>
+          <a href="#register" class="btn btn-sm btn-primary event-reg-btn" data-event="GenAI & Data Science Bootcamp">Register</a>
+        </div>
+
+        <div class="event-card" data-category="cultural">
+          <div class="event-tag cultural">Cultural</div>
+          <h3>Choreography Dance Competition</h3>
+          <p class="event-desc">Group and solo dance competitions showcasing eastern, western, and street dance styles.</p>
+          <div class="event-meta">
+            <span><i class="fa-regular fa-calendar"></i> Nov 14, 04:00 PM</span>
+            <span><i class="fa-solid fa-location-dot"></i> Main Stage</span>
+          </div>
+          <a href="#register" class="btn btn-sm btn-primary event-reg-btn" data-event="Choreography Dance Competition">Register</a>
+        </div>
+      </div>
+      
+      <div id="noEventsMsg" class="no-events hidden">
+        <i class="fa-solid fa-folder-open"></i>
+        <p>No matching events found. Try searching for another keyword or change filter.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 3: REGISTER -->
+    <section id="register" class="section bg-alt">
+      <div class="section-title">
+        <h2>Student Registration</h2>
+        <p>Enter your details to generate your official Innovación '26 entry pass</p>
+      </div>
+
+      <div class="register-container">
+        <!-- JS Feature 3: Registration Form -->
+        <form id="registrationForm" class="form-card" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" placeholder="e.g. Rahul Verma" required />
+              <small class="error-text" id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="studentId">Enrollment / Roll No *</label>
+              <input type="text" id="studentId" placeholder="e.g. 12020009015001" required />
+              <small class="error-text" id="idError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" placeholder="e.g. student@iem.edu.in" required />
+              <small class="error-text" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="department">Department / College *</label>
+              <select id="department" required>
+                <option value="">Select Department</option>
+                <option value="IEM - CSE / IT">IEM - Computer Science & IT</option>
+                <option value="IEM - ECE / EE">IEM - Electronics & Communication</option>
+                <option value="IEM - BBA / MBA">IEM - Management (BBA/MBA)</option>
+                <option value="IEM - Basic Science">IEM - Basic Science & Humanities</option>
+                <option value="Other College Student">External College Student</option>
+              </select>
+              <small class="error-text" id="deptError"></small>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="eventSelect">Select Event *</label>
+              <select id="eventSelect" required>
+                <option value="">Choose an event</option>
+                <option value="IEM Hackathon '26">IEM Hackathon '26</option>
+                <option value="IEMpact Band Battle">IEMpact Band Battle</option>
+                <option value="Robo-Navigator & Wars">Robo-Navigator & Wars</option>
+                <option value="Valorant & BGMI LAN Fest">Valorant & BGMI LAN Fest</option>
+                <option value="GenAI & Data Science Bootcamp">GenAI & Data Science Bootcamp</option>
+                <option value="Choreography Dance Competition">Choreography Dance Competition</option>
+              </select>
+              <small class="error-text" id="eventError"></small>
+            </div>
+
+            <div class="form-group full-width checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="termsCheck" required />
+                <span>I agree to follow IEM campus decorum and event guidelines. *</span>
+              </label>
+              <small class="error-text" id="termsError"></small>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Generate Digital Pass</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SECTION 4: GALLERY -->
+    <section id="gallery" class="section">
+      <div class="section-title">
+        <h2>Previous Fest Highlights</h2>
+        <p>Glimpses from IEM Kolkata campus events. Click an image to view enlarged.</p>
+      </div>
+
+      <!-- JS Feature 4: Gallery Lightbox -->
+      <div class="gallery-grid">
+        <div class="gallery-item" data-caption="Innovación Opening Ceremony at CII Auditorium">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="Inauguration" />
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <span>Opening Ceremony</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-caption="Students competing in 24-Hr Hackathon">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Hackathon" />
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <span>Hack
